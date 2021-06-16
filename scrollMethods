@@ -1,0 +1,13 @@
+btnScrollTo.addEventListener('click', function(e){
+  const s1cords = section1.getBoundingClientRect();
+  
+  //oldway of scrollfinding
+  // window.scrollTo({
+  //   left : s1cords.left + window.pageXOffset,
+  //   top : s1cords.top + window.pageYOffset,
+  //   behavior : 'smooth',
+  // });
+
+  //modern way
+  section1.scrollIntoView({behavior: "smooth"}) //this one does not work in old browsers
+})
